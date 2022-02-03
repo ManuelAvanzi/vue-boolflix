@@ -6,7 +6,8 @@
       </div>
 
       <!--sostituisco un componenete con un più semplice div-->
-      <div class="input-container">
+
+      <div class="input-container ">
         <input v-model="filmString" type="text">
         <button id="button" @click="searchFilm">Search</button>    
       </div>
