@@ -12,7 +12,9 @@
 import filmCard from './filmCard.vue'
 
 export default {
-  components: { filmCard },
+  components: {
+       filmCard 
+       },
     
 }
 </script>
