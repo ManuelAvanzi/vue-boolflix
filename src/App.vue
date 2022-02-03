@@ -2,7 +2,7 @@
   <div id="app">
     <!--@nome evento custom ="nome della funzione in App.vue che userà il valore passato"-->
     <header-container @search="cercaFilm"/>
-    <main-container/>
+    <main-container :elenco="films"/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 
 //API Key: f92de852056df36bad71c98feade9c89
 //https://api.themoviedb.org/3/search/movie?api_key=f92de852056df36bad71c98feade9c89 
-//import axios from 'axios'
+import axios from 'axios'
 import HeaderContainer from './components/headerContainer.vue'
 import MainContainer from './components/mainContainer.vue'
 
@@ -23,7 +23,11 @@ export default {
   },
   data(){
     return {
-      films:[]
+      films:[],
+      
+      stringA:"https://api.themoviedb.org/3/search/movie?query=",
+      stringB:"&api_key=f92de852056df36bad71c98feade9c89",
+
     }
   },
   methods:{
@@ -33,6 +37,16 @@ export default {
       //userQuery è la variabile che ho definito in headerContainer.vue
       cercaFilm(userQuery){
         console.log(userQuery);
+
+        console.log(this.stringA + userQuery + this.stringB)
+        
+        axios.get(this.stringA + userQuery + this.stringB).then((response)=>{
+        this.films=response.data.results;
+        console.log(this.films);
+        
+        });
+
+      
       }       
    },
                                            

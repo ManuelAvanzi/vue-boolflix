@@ -1,7 +1,11 @@
 <template>
     <div class="main-box">
 
-         <film-card/>
+  <!--per ogni elemento in elenco passo la prop-->
+         <film-card
+                v-for="movie in elenco"
+                :key="movie.id"
+                :card="movie" />
 
     </div>
 
@@ -10,10 +14,15 @@
 
 <script>
 import filmCard from './filmCard.vue'
-
 export default {
   components: {
        filmCard 
+       },
+
+       props: {
+
+         elenco: Array,
+       
        },
     
 }
@@ -22,11 +31,19 @@ export default {
 
 <style lang="scss" scoped>
 .main-box{
-    width: 100%;
-    height: 1000px;
-    background-color: rgba(128, 128, 128, 0.966);
+    margin:0 auto;
+    width: 90%;
+    
+    background-color: black;
     padding:20px;
 
+    border:1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    
+    film-card{
+        
+    }
     
 }
 
