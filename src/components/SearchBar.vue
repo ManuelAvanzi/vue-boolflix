@@ -1,22 +1,31 @@
 <template>
-    
+
     <div class="container">
-            <input v-model="filmString" type="text">
-            <button id="button" @click="searchFilm">Search</button>    
+        <input v-model="filmString" type="text">
+        <button id="button" @click="searchFilm">Search</button>    
     </div>
 </template>
 
 
 <script>
 export default {
+
     data(){
         return {
-        filmString:"",
+
+         // Questa potrebbe essere la stringa che passerò alla funzione che farà la chiamata API
+         filmString:"",
+
         }
     },
     methods:{
+
+
+          // Semplice funzione per capire se è tutto ok 
         searchFilm:function(){
+
             console.log(`${this.filmString}`);
+
             this.filmString="";
 
         }
