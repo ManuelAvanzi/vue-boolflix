@@ -1,14 +1,26 @@
 <template>
+    
     <div class="container">
-        <input type="text" placeholder="cerca un film">
-        <button>SEARCH</button>
+            <input v-model="filmString" type="text">
+            <button id="button" @click="searchFilm">Search</button>    
     </div>
 </template>
 
 
 <script>
 export default {
-    
+    data(){
+        return {
+        filmString:"",
+        }
+    },
+    methods:{
+        searchFilm:function(){
+            console.log(`${this.filmString}`);
+            this.filmString="";
+
+        }
+    }
 }
 </script>
 
