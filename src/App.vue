@@ -8,6 +8,7 @@
 <script>
 
 //API Key: f92de852056df36bad71c98feade9c89
+//https://api.themoviedb.org/3/search/movie?api_key=f92de852056df36bad71c98feade9c89 
 //import axios from 'axios'
 import HeaderContainer from './components/headerContainer.vue'
 import MainContainer from './components/mainContainer.vue'
