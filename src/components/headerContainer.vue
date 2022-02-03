@@ -9,7 +9,11 @@
 
       <div class="input-container ">
         <input v-model="filmString" type="text">
-        <button id="button" @click="searchFilm">Search</button>    
+
+
+      <!--quando premo il button passa ad App.vue la stringa inserita -->
+      <!--al click creo un evento custom chiamato search a cui passo filmstring che continene la stringa inserita -->
+        <button id="button" @click="$emit('search' , filmString)">Search</button>    
       </div>
 
     </div>
@@ -20,37 +24,15 @@
 
 
 export default {
-    components:{
-        
-    },
     data(){
         return {
 
          // stringa che ricevo dal utente
-         filmString:"",
-
-         stringA:"https://api.themoviedb.org/3/search/movie?query=",
-         stringB:"&api_key=f92de852056df36bad71c98feade9c89",
-          
-         // stringA + filmstring + stringB
-         myQuery:"",
+         filmString: "",
+         
         }
     },
     methods:{
-
-
-        
-        searchFilm:function(){
-
-            this.myQuery=this.stringA + this.filmString+ this.stringB,
-            console.log(`questa è la query che manderò : ${this.myQuery}`);
-            this.filmString="";
-
-            
-            
-        },
-
-        
 
     },
 }

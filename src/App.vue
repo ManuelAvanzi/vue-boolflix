@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <header-container />
+    <!--@nome evento custom ="nome della funzione in App.vue che userà il valore passato"-->
+    <header-container @search="cercafilms"/>
     <main-container/>
   </div>
 </template>
@@ -27,14 +28,13 @@ export default {
   },
   methods:{
 
-    // passo ad axios la stringa che viene da film card che viene da header
-      //cercaFilm(myQuery){
-
-        // return axios.get('myQuery').then((response)=>{
-         //this.films=response.data.results
-         //console.log(response.data.results);
-      //})
-  }
+      
+      //cercafilms ora parte ogni volta che viene premuto il pulsante 
+      cercafilms(){
+        console.log("emit is working so good tonight ");
+      }       
+   },
+                                           
   }
 
 </script>
