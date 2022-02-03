@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header-container/>
+    <header-container />
     <main-container/>
   </div>
 </template>
@@ -26,13 +26,17 @@ export default {
     }
   },
   methods:{
-    chiamata:function(){
-    //  axios.get('').then((response)=>{
-    //     this.response.data.response
-    //  })
-    }
+
+    // passo ad axios la stringa che viene da film card che viene da header
+      //cercaFilm(myQuery){
+
+        // return axios.get('myQuery').then((response)=>{
+         //this.films=response.data.results
+         //console.log(response.data.results);
+      //})
   }
-}
+  }
+
 </script>
 
 <style lang="scss">
