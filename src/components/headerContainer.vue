@@ -8,12 +8,12 @@
       <!--sostituisco un componenete con un più semplice div-->
 
       <div class="input-container ">
-        <input v-model="filmString" type="text">
+        <input v-model="userQuery" type="text">
 
 
       <!--quando premo il button passa ad App.vue la stringa inserita -->
-      <!--al click creo un evento custom chiamato search a cui passo filmstring che continene la stringa inserita -->
-        <button id="button" @click="$emit('search' , filmString)">Search</button>    
+      <!--al click creo un evento custom chiamato search a cui passo userQuery che continene la stringa inserita -->
+        <button id="button" @click="$emit('search' , userQuery)">Search</button>    
       </div>
 
     </div>
@@ -28,7 +28,7 @@ export default {
         return {
 
          // stringa che ricevo dal utente
-         filmString: "",
+         userQuery: "",
          
         }
     },

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--@nome evento custom ="nome della funzione in App.vue che userà il valore passato"-->
-    <header-container @search="cercafilms"/>
+    <header-container @search="cercaFilm"/>
     <main-container/>
   </div>
 </template>
@@ -29,9 +29,10 @@ export default {
   methods:{
 
       
-      //cercafilms ora parte ogni volta che viene premuto il pulsante 
-      cercafilms(){
-        console.log("emit is working so good tonight ");
+      //cercaFilm ora parte ogni volta che viene premuto il pulsante 
+      //userQuery è la variabile che ho definito in headerContainer.vue
+      cercaFilm(userQuery){
+        console.log(userQuery);
       }       
    },
                                            
