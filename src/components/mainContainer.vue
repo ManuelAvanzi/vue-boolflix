@@ -41,9 +41,6 @@ export default {
     display: flex;
     flex-wrap: wrap;
     
-    film-card{
-        
-    }
     
 }
 

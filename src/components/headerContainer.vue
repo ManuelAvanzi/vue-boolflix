@@ -2,7 +2,7 @@
     <div class="header-box">
 
       <div class="logo-container">
-        <h1>Boolflix</h1>
+        <img src="../assets/Logonetflix.png" alt="">
       </div>
 
       <!--sostituisco un componenete con un più semplice div-->
@@ -46,6 +46,10 @@ export default {
      background-color: rgba(0, 0, 0, 0.932);
      display: flex;
      justify-content: space-between;
+
+     img{
+       width: 180px;
+     }
 
      .input-container{
     input{

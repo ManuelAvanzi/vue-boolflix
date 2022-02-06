@@ -2,8 +2,8 @@
     
         <div class="info-card">
             <div class="text">{{card.title}}</div>
-            <div class="text">{{card.original_title}}</div>
-            <div class="text">{{card.original_language}}</div>
+            <!--<div class="text">{{card.original_title}}</div> -->
+            <!-- <div class="text">{{card.original_language}}</div> -->
             <div class="text">{{card.vote_average}}</div>
             
         </div>

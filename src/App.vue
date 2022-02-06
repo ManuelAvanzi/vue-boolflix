@@ -23,7 +23,9 @@ export default {
   },
   data(){
     return {
+      api_key:'f92de852056df36bad71c98feade9c89',
       films:[],
+      series:[],
       
       stringA:"https://api.themoviedb.org/3/search/movie?query=",
       stringB:"&api_key=f92de852056df36bad71c98feade9c89",
