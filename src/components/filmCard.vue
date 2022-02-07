@@ -7,10 +7,13 @@
             <h3>{{movie.title}}</h3>
             <ul>
                 <li><span class="movie-info">Titolo Originale:</span> {{movie.original_title}}</li>
+                <li> <rate-container :rate="movie.vote_average"/></li>
+                <li><span class="show-info">Lingua:</span> </li>
+                <li><img :src="`/flags/${show.original_language}.png`" :alt="show.original_language"></li>
 
                 
                    
-               <span class="movie-info">Lingua:</span> 
+             
                 
                 
             </ul>
@@ -23,8 +26,14 @@
         
 
 <script>
+
+import rateContainer from './rateContainer.vue'
+
 export default {
 
+   components:{
+       rateContainer,
+   },
     props: {
         movie: Object
     },
@@ -74,6 +83,9 @@ export default {
                      margin-top: 10px;
                      font-size: 11px;
                      width: 80%;
+                 }
+                 img{
+                     width:50px;
                  }
              }
              &::after {

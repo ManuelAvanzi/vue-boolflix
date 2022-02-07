@@ -25,8 +25,8 @@
 
 <script>
 
-import TvCard from   '../components/TvCard.vue'
-import filmCard from '../components/filmCard.vue'
+import TvCard from '@/components/TvCard.vue'
+import filmCard from '@/components/filmCard.vue'
 
 
 export default {

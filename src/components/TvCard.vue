@@ -3,11 +3,12 @@
     <div class="info-card">
        <img :src="`https:image.tmdb.org/t/p/original${show.poster_path}`">
         <div class="info">
-            <h3>{{show.title}}</h3>
+            <h3>{{show.name}}</h3>
             <ul>
-                <li><span class="movie-info">Titolo Originale:</span> {{show.original_title}}</li>
+                <li><span class="movie-info">Titolo Originale:</span> {{show.original_name}}</li>
         
-               <span class="show-info">Lingua:</span> 
+                <li><span class="show-info">Lingua:</span> </li>
+                <li><img :src="`/flags/${show.original_language}.png`" :alt="show.original_language"></li>
                      
             </ul>   
         </div>
@@ -65,6 +66,9 @@ export default {
                      margin-top: 10px;
                      font-size: 11px;
                      width: 80%;
+                 }
+                 img{
+                     width: 50px;
                  }
              }
              &::after {
