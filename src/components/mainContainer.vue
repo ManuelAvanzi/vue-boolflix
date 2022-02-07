@@ -1,47 +1,78 @@
 <template>
-    <div class="main-box">
 
-  <!--per ogni elemento in elenco passo la prop-->
-         <film-card
-                v-for="movie in elenco"
+<main>
+    
+    <div class="section-title"><h1>FILM</h1></div>
+
+    <div class="container-film">
+        <film-card v-for="movie in films" 
                 :key="movie.id"
-                :card="movie" />
-
+                :movie="movie" />
     </div>
+
+    <div class="section-title"><h1>SERIE</h1></div>
+    
+    <div class="container-serie">
+            <tv-card v-for="show in series" 
+                :key="show.id"
+                :show="show"/>
+    </div>
+</main>
+    
 
 </template>
 
 
 <script>
-import filmCard from './filmCard.vue'
+
+import TvCard from   '../components/TvCard.vue'
+import filmCard from '../components/filmCard.vue'
+
+
 export default {
   components: {
-       filmCard 
-       },
-
-       props: {
-
-         elenco: Array,
-       
-       },
-    
+        filmCard,
+        TvCard
+    },
+    props: {
+        films: Array,
+        series: Array,
+    }
 }
 </script>
 
 
 <style lang="scss" scoped>
-.main-box{
-    margin:0 auto;
-    width: 90%;
-    
-    background-color: black;
-    padding:20px;
+  main {
+        width: 90%;
+        
+        margin: 0 auto;
 
-    border:1px solid white;
-    display: flex;
-    flex-wrap: wrap;
-    
-    
-}
+        .section-title{
+            
+            margin:10px;
+            h1{
+                color:white;
+                padding:10px;
+            }
+        }
+      
+        .container-film{
+            
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .container-serie{
+            
+
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+
+
+    }
 
 </style>

@@ -1,41 +1,32 @@
 <template>
     
-
-     <div class="info-card">
-       <img :src="`https://image.tmdb.org/t/p/original${movie.poster_path}`">
+    <div class="info-card">
+       <img :src="`https:image.tmdb.org/t/p/original${show.poster_path}`">
         <div class="info">
-            <h3>{{movie.title}}</h3>
+            <h3>{{show.title}}</h3>
             <ul>
-                <li><span class="movie-info">Titolo Originale:</span> {{movie.original_title}}</li>
-
-                
-                   
-               <span class="movie-info">Lingua:</span> 
-                
-                
-            </ul>
-           
-            
+                <li><span class="movie-info">Titolo Originale:</span> {{show.original_title}}</li>
+        
+               <span class="show-info">Lingua:</span> 
+                     
+            </ul>   
         </div>
     </div>
-</template>
+       
     
-        
+</template>
 
 <script>
 export default {
 
     props: {
-        movie: Object
+        show: Object
     },
 }
 </script>
 
 <style lang="scss" scoped>
-
-
-
-     .info-card {
+ .info-card {
          background-color: white;
          color: white;
          margin: 10px;
