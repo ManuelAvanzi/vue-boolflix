@@ -8,8 +8,9 @@
             <ul>
                 <li><span class="movie-info">Titolo Originale:</span> {{movie.original_title}}</li>
                 
-                
-                <li><span class="show-info">Lingua:</span> </li>
+                <li>punteggio :<score-box :score="movie.vote_average"/></li>
+
+                <li><span class="movie-info">Lingua:</span> </li>
                 <li><img :src="`/flags/${movie.original_language}.png`" :alt="movie.original_language"></li>    
             </ul>
            
@@ -21,14 +22,18 @@
         
 
 <script>
+import scoreBox from './scoreBox.vue'
+
 
 
 
 export default {
-
-   components:{
-       
-   },
+ 
+    components: {
+        
+        scoreBox,
+    },
+   
     props: {
         movie: Object
     },

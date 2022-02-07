@@ -9,7 +9,8 @@
         
                 <li><span class="show-info">Lingua:</span> </li>
 
-                
+                <li>punteggio :<score-box :score="show.vote_average"/></li>
+
                 <li><img :src="`/flags/${show.original_language}.png`" :alt="show.original_language"></li>
                      
             </ul>   
@@ -20,7 +21,13 @@
 </template>
 
 <script>
+import scoreBox from './scoreBox.vue'
 export default {
+
+    components: {
+        
+        scoreBox,
+    },
 
     props: {
         show: Object
