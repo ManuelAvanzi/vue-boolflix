@@ -2,20 +2,15 @@
     
 
      <div class="info-card">
-       <img :src="`https://image.tmdb.org/t/p/original${movie.poster_path}`">
+       <img :src=" `https://image.tmdb.org/t/p/original${movie.poster_path}` ">
         <div class="info">
             <h3>{{movie.title}}</h3>
             <ul>
                 <li><span class="movie-info">Titolo Originale:</span> {{movie.original_title}}</li>
-                <li> <rate-container :rate="movie.vote_average"/></li>
+                
+                
                 <li><span class="show-info">Lingua:</span> </li>
-                <li><img :src="`/flags/${show.original_language}.png`" :alt="show.original_language"></li>
-
-                
-                   
-             
-                
-                
+                <li><img :src="`/flags/${movie.original_language}.png`" :alt="movie.original_language"></li>    
             </ul>
            
             
@@ -27,12 +22,12 @@
 
 <script>
 
-import rateContainer from './rateContainer.vue'
+
 
 export default {
 
    components:{
-       rateContainer,
+       
    },
     props: {
         movie: Object
@@ -84,7 +79,7 @@ export default {
                      font-size: 11px;
                      width: 80%;
                  }
-                 img{
+                 .flag-img{
                      width:50px;
                  }
              }

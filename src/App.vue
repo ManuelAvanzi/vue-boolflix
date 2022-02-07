@@ -37,7 +37,7 @@ export default {
 
       
      
-      //userQuery è la variabile che ho definito in headerContainer.vue
+      //userQuery è la stringa inserita dall' utente
       cercaFilm(userQuery){
         
         

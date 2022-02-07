@@ -8,6 +8,8 @@
                 <li><span class="movie-info">Titolo Originale:</span> {{show.original_name}}</li>
         
                 <li><span class="show-info">Lingua:</span> </li>
+
+                
                 <li><img :src="`/flags/${show.original_language}.png`" :alt="show.original_language"></li>
                      
             </ul>   

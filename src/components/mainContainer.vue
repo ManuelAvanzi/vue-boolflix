@@ -4,6 +4,7 @@
     
     <div class="section-title"><h1>FILM</h1></div>
 
+    <!--FILMS-->
     <div class="container-film">
         <film-card v-for="movie in films" 
                 :key="movie.id"
@@ -12,6 +13,8 @@
 
     <div class="section-title"><h1>SERIE</h1></div>
     
+
+    <!--SERIE-->
     <div class="container-serie">
             <tv-card v-for="show in series" 
                 :key="show.id"
